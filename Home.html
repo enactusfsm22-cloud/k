@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1.2" />
+    <title>SayadiAirways - Home</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <img src="Icons/logo.png" alt="SayadiAirways Logo" />
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white active" aria-current="page" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ModifyBooking.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section__container header__container">
+        <div class="header__image__container">
+        <div class="header__content">
+          <h1>Fly to Arab Cup Qatar and the African Cup in Morocco</h1>
+          <p>Support Tunisia and soar with our Eagles wherever they go.</p>
+          <div class="hero__features">
+            <div class="hero__feature">
+              <i class="ri-checkbox-circle-line"></i>
+              <span>Best Price Guarantee</span>
+            </div>
+            <div class="hero__feature">
+              <i class="ri-checkbox-circle-line"></i>
+              <span>Free Cancellation</span>
+            </div>
+            <div class="hero__feature">
+              <i class="ri-checkbox-circle-line"></i>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="booking__container">
+          <form id="bookingForm" action="Book.html" method="get">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="input__group">
+                  <i class="ri-flight-takeoff-line input__icon"></i>
+                  <input type="text" class="form-control" placeholder="From" name="from" required />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="input__group">
+                  <i class="ri-flight-land-line input__icon"></i>
+                  <input type="text" class="form-control" placeholder="To" name="to" required />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="input__group">
+                  <i class="ri-calendar-line input__icon"></i>
+                  <input type="date" class="form-control" name="date" required />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="input__group">
+                  <i class="ri-user-line input__icon"></i>
+                  <input type="text" class="form-control" placeholder="1 Adult, Economy" name="passengers" />
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn--search btn--rounded mt-3 w-100">
+              <i class="ri-search-line"></i> Search Flights
+            </button>
+          </form>
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <section class="section__container stats__container">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6">
+            <div class="stat__card text-center">
+              <div class="stat__icon">
+                <i class="ri-global-line"></i>
+              </div>
+              <h3 class="stat__number" data-target="150">150+</h3>
+              
+              
+              <p>Destinations Worldwide</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="stat__card text-center">
+              <div class="stat__icon">
+                <i class="ri-flight-takeoff-line"></i>
+              </div>
+              <h3 class="stat__number" data-target="500">500</h3>
+              <p>Daily Flights</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="stat__card text-center">
+              <div class="stat__icon">
+                <i class="ri-group-line"></i>
+              </div>
+              <h3 class="stat__number" data-target="2" data-suffix="M">2M</h3>
+              <p>Million Passengers Annually</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="stat__card text-center">
+              <div class="stat__icon">
+                <i class="ri-award-line"></i>
+              </div>
+              <h3 class="stat__number" data-target="25">25</h3>
+              <p>Years of Excellence</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="section__container popular__container">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">Popular Destinations</h2>
+        <div class="popular__grid">
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Kuala Lumpur.jpg" alt="Kuala Lumpur" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Kuala Lumpur</h4>
+                <h4 class="mb-0">From 2309DT</h4>
+              </div>
+              <p class="popular__card__description">Experience the perfect blend of modern and traditional</p>
+              <a href="Book.html?country=Kuala%20Lumpur" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Bangkok.jpg" alt="Bangkok" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Bangkok</h4>
+                <h4 class="mb-0">From 1970DT</h4>
+              </div>
+              <p class="popular__card__description">Immerse yourself in vibrant culture and delicious cuisine</p>
+              <a href="Book.html?country=Bangkok" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Seychelles.jpg" alt="Seychelles" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Seychelles</h4>
+                <h4 class="mb-0">From 1580DT</h4>
+              </div>
+              <p class="popular__card__description">Paradise on Earth with pristine beaches</p>
+              <a href="Book.html?country=Seychelles" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Barcelone.jpg" alt="Barcelona" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Barcelona</h4>
+                <h4 class="mb-0">From 982DT</h4>
+              </div>
+              <p class="popular__card__description">Discover Gaudi's masterpieces and Mediterranean charm</p>
+              <a href="Book.html?country=Barcelona" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Australia.jpg" alt="Australia" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Australia</h4>
+                <h4 class="mb-0">From 3690DT</h4>
+              </div>
+              <p class="popular__card__description">From the Great Barrier Reef to the Outback</p>
+              <a href="Book.html?country=Australia" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="popular__card card card-elevated">
+            <img src="Icons/Mumbai.jpg" alt="Mumbai" class="rect-img card-img-top" />
+            <div class="popular__content card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">Mumbai</h4>
+                <h4 class="mb-0">From 3129DT</h4>
+              </div>
+              <p class="popular__card__description">India's financial capital with Bollywood glamour</p>
+              <a href="Book.html?country=Mumbai" class="popular__card__btn">Book Now <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section class="offers">
+      <div class="section__container client__container">
+        <div class="container">
+          <h2 class="section__header text-center mb-3">Start Planning Your Next Trip</h2>
+          <p class="text-center text-muted mb-5">Discover amazing destinations and special events around the world</p>
+          <div class="client__grid">
+            <div class="client__card card card-elevated">
+              <img src="Icons/Monastir.jpg" alt="Tunisia" class="rect-img card-img-top" />
+              <div class="client__card__content p-3 card-body">
+                <h3>Tunisia - Your Next Adventure</h3>
+                <p>Plan your next getaway with a voyage organisé to Tunisia — discover golden beaches, ancient history, and Tunisian charm all in one unforgettable trip!</p>
+                <a href="Explore.html" class="client__card__link">Explore Tunisia <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+            <div class="client__card card card-elevated">
+              <img src="Icons/2026.png" alt="FIFA World Cup 2026" class="rect-img card-img-top" />
+              <div class="client__card__content p-3 card-body">
+                <h3>FIFA World Cup 2026</h3>
+                <p>FIFA World Cup 2026 is set to be an unforgettable event, with matches hosted across the USA, Canada, and Mexico. Get ready to witness football history in the making!</p>
+                <a href="Book.html" class="client__card__link">Book Your Flight <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+            <div class="client__card card card-elevated">
+              <img src="Icons/BAL.jpg" alt="Basketball African League" class="rect-img card-img-top" />
+              <div class="client__card__content p-3 card-body">
+                <h3>Basketball African League</h3>
+                <p>Basket African League (BAL) is Africa's premier professional basketball league, showcasing top talent from across the continent. Experience the excitement and passion of African basketball at its finest!</p>
+                <a href="Book.html" class="client__card__link">Book Tickets <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section__container why__container">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">Why Choose SayadiAirways?</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <h3>Safety First</h3>
+              <p>Your safety is our top priority. We maintain the highest international safety standards with modern aircraft and experienced crew.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-time-line"></i>
+              </div>
+              <h3>On-Time Performance</h3>
+              <p>We pride ourselves on punctuality with one of the best on-time performance records in the industry.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-star-line"></i>
+              </div>
+              <h3>Award-Winning Service</h3>
+              <p>Recognized globally for our exceptional service, comfort, and hospitality that makes every journey memorable.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-price-tag-3-line"></i>
+              </div>
+              <h3>Best Value</h3>
+              <p>Competitive prices without compromising on quality. Get the best value for your travel budget.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-customer-service-2-line"></i>
+              </div>
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock customer service in multiple languages to assist you whenever you need help.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="why__card text-center">
+              <div class="why__icon">
+                <i class="ri-wifi-line"></i>
+              </div>
+              <h3>Modern Fleet</h3>
+              <p>Fly on our state-of-the-art aircraft equipped with the latest technology and entertainment systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="section__container offers__section">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">Special Offers & Promotions</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="offer__card">
+              <div class="offer__badge">Limited Time</div>
+              <div class="offer__content">
+                <h3>Early Bird Special</h3>
+                <p>Book 60 days in advance and save up to 30% on your next flight</p>
+                <div class="offer__discount">Save 30%</div>
+                <a href="Book.html" class="offer__btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer__card">
+              <div class="offer__badge">New</div>
+              <div class="offer__content">
+                <h3>Student Discount</h3>
+                <p>Students get exclusive discounts on all flights. Valid student ID required.</p>
+                <div class="offer__discount">Save 25%</div>
+                <a href="Book.html" class="offer__btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer__card">
+              <div class="offer__badge">Popular</div>
+              <div class="offer__content">
+                <h3>Family Package</h3>
+                <p>Special rates for families traveling together. Children fly at discounted rates.</p>
+                <div class="offer__discount">Save 20%</div>
+                <a href="Book.html" class="offer__btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section__container testimonials__container">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">What Our Passengers Say</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial__card">
+              <div class="testimonial__rating mb-3">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <p class="testimonial__text">"Outstanding service from check‑in through landing. The crew were professional and attentive, and the cabin was exceptionally comfortable. I highly recommend SayadiAirways."</p>
+              <div class="testimonial__author d-flex align-items-center mt-3">
+                <div class="author__avatar me-3">MK</div>
+                <div>
+                  <h4 class="mb-0">Mohamed Khelifi</h4>
+                  <p class="mb-0">Business Traveler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial__card">
+              <div class="testimonial__rating mb-3">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <p class="testimonial__text">"An outstanding travel experience. The onboard dining and entertainment were excellent, and the staff consistently went above and beyond to ensure our comfort."</p>
+              <div class="testimonial__author d-flex align-items-center mt-3">
+                <div class="author__avatar me-3">SA</div>
+                <div>
+                  <h4 class="mb-0">Arij Nasr</h4>
+                  <p class="mb-0">Frequent Flyer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial__card">
+              <div class="testimonial__rating mb-3">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <p class="testimonial__text">"Traveling with my family was seamless and enjoyable. The entertainment system kept the children engaged, and we arrived feeling refreshed — thank you."</p>
+              <div class="testimonial__author d-flex align-items-center mt-3">
+                <div class="author__avatar me-3">YM</div>
+                <div>
+                  <h4 class="mb-0">Yosri Mathlouthi</h4>
+                  <p class="mb-0">Family Traveler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Information -->
+    <section class="section__container travel__info__container">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">Travel Information</h2>
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6">
+            <div class="travel__info__card">
+              <i class="ri-luggage-cart-line"></i>
+              <h3>Baggage Information</h3>
+              <p>Learn about baggage allowances, restrictions, and fees for all travel classes.</p>
+              <a href="Contact.html" class="travel__info__link">Learn More <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="travel__info__card">
+              <i class="ri-calendar-check-line"></i>
+              <h3>Check-In Options</h3>
+              <p>Online check-in available 24-48 hours before departure. Fast and convenient.</p>
+              <a href="Book.html" class="travel__info__link">Check In <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="travel__info__card">
+              <i class="ri-passport-line"></i>
+              <h3>Travel Requirements</h3>
+              <p>Important information about visas, passports, and travel documents needed.</p>
+              <a href="Contact.html" class="travel__info__link">View Requirements <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="travel__info__card">
+              <i class="ri-flight-takeoff-line"></i>
+              <h3>Flight Status</h3>
+              <p>Check real-time flight status, delays, and gate information for your flight.</p>
+              <a href="Book.html" class="travel__info__link">Check Status <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sayadinho Club -->
+    <section class="section__container">
+      <div class="container">
+        <div class="reward__container text-center">
+          <p class="lead text-muted mb-2">Become a Sayadinho Club member</p>
+          <h4>Enjoy exclusive member benefits — priority boarding and tailored discounts on every booking.</h4>
+          <a href="Login.html" class="reward__btn" aria-label="Join Sayadinho Club">Join Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global site modal (used by quick actions) -->
+    <div id="siteModal" class="modal" aria-hidden="true">
+      <div class="modal__dialog">
+        <button class="modal__close" aria-label="Close modal">&times;</button>
+        <div id="modalContent" class="modal__content"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <img src="Icons/logo.png" alt="SayadiAirways">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to receive exclusive deals, travel tips, and the latest news from SayadiAirways.</p>
+            <form class="pro-footer__newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="pro-footer__contact">
+              <div class="pro-footer__contact-item">
+                <i class="ri-phone-line"></i>
+                <span>+216 70 123 456</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-mail-line"></i>
+                <span>contact@sayadiairways.com</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-map-pin-line"></i>
+                <span>Tunis-Carthage International Airport, Tunisia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

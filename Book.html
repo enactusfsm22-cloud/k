@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1.2" />
+    <title>SayadiAirways - Book Your Flight</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <img src="Icons/logo.png" alt="SayadiAirways Logo" />
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white active" href="Book.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ModifyBooking.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="book-hero">
+      <h1><i class="ri-plane-line"></i> Book Your Flight</h1>
+      <p>Find the best deals on flights to over 100 destinations worldwide</p>
+    </section>
+
+    <div class="book-search-card">
+      <form action="Book.html" method="get">
+        <div class="book-trip-type">
+          <label>
+            <input type="radio" name="tripType" value="roundtrip" checked>
+            <i class="ri-refresh-line"></i> Round Trip
+          </label>
+          <label>
+            <input type="radio" name="tripType" value="oneway">
+            <i class="ri-arrow-right-line"></i> One Way
+          </label>
+          <label>
+            <input type="radio" name="tripType" value="multicity">
+            <i class="ri-route-line"></i> Multi-City
+          </label>
+        </div>
+
+        <div class="book-form-grid">
+          <div class="book-form-group">
+            <label><i class="ri-flight-takeoff-line"></i> From</label>
+            <i class="ri-map-pin-line input-icon"></i>
+            <input type="text" name="from" placeholder="Tunis, Tunisia (TUN)" required>
+          </div>
+          <button type="button" class="book-swap-btn" onclick="swapCities()">
+            <i class="ri-arrow-left-right-line"></i>
+          </button>
+          <div class="book-form-group">
+            <label><i class="ri-flight-land-line"></i> To</label>
+            <i class="ri-map-pin-line input-icon"></i>
+            <input type="text" name="to" id="toInput" placeholder="Where to?" required>
+          </div>
+        </div>
+
+        <div class="book-form-row">
+          <div class="book-form-group">
+            <label><i class="ri-calendar-line"></i> Departure</label>
+            <i class="ri-calendar-line input-icon"></i>
+            <input type="date" name="departure" required>
+          </div>
+          <div class="book-form-group">
+            <label><i class="ri-calendar-check-line"></i> Return</label>
+            <i class="ri-calendar-check-line input-icon"></i>
+            <input type="date" name="return">
+          </div>
+          <div class="book-form-group">
+            <label><i class="ri-user-line"></i> Passengers</label>
+            <i class="ri-team-line input-icon"></i>
+            <select name="passengers" required>
+              <option value="1">1 Passenger</option>
+              <option value="2">2 Passengers</option>
+              <option value="3">3 Passengers</option>
+              <option value="4">4 Passengers</option>
+              <option value="5">5+ Passengers</option>
+            </select>
+          </div>
+          <div class="book-form-group">
+            <label><i class="ri-vip-crown-line"></i> Class</label>
+            <i class="ri-vip-crown-line input-icon"></i>
+            <select name="class" required>
+              <option value="economy">Economy</option>
+              <option value="premium">Premium Economy</option>
+              <option value="business">Business</option>
+              <option value="first">First Class</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="book-search-btn">
+          <i class="ri-search-line"></i> Search Flights
+        </button>
+
+        <div class="book-quick-dest">
+          <span>Popular:</span>
+          <a href="Book.html?to=Doha">Doha</a>
+          <a href="Book.html?to=London">London</a>
+          <a href="Book.html?to=Paris">Paris</a>
+          <a href="Book.html?to=Dubai">Dubai</a>
+          <a href="Book.html?to=Istanbul">Istanbul</a>
+          <a href="Book.html?to=Seoul">Seoul</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="book-features">
+      <div class="book-feature-card">
+        <i class="ri-shield-check-line"></i>
+        <h4>Best Price Guarantee</h4>
+        <p>Find a lower price? We'll match it and give you 10% off</p>
+      </div>
+      <div class="book-feature-card">
+        <i class="ri-refund-2-line"></i>
+        <h4>Free Cancellation</h4>
+        <p>Cancel up to 24 hours before departure at no extra cost</p>
+      </div>
+      <div class="book-feature-card">
+        <i class="ri-customer-service-2-line"></i>
+        <h4>24/7 Support</h4>
+        <p>Our team is available around the clock to assist you</p>
+      </div>
+      <div class="book-feature-card">
+        <i class="ri-secure-payment-line"></i>
+        <h4>Secure Payment</h4>
+        <p>Your payment information is encrypted and protected</p>
+      </div>
+    </div>
+
+    <section class="book-routes-section">
+      <h2 class="section__header">Popular Routes</h2>
+      <div class="book-routes-grid">
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/Doha.jpg" alt="Doha">
+            <span class="book-route-badge">Direct Flight</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">DOH</div>
+                <div class="name">Doha</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>850 DT</span>
+              </div>
+              <a href="Book.html?to=Doha" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/London.png" alt="London">
+            <span class="book-route-badge">Popular</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">LHR</div>
+                <div class="name">London</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>1,200 DT</span>
+              </div>
+              <a href="Book.html?to=London" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/Seoul.jpg" alt="Seoul">
+            <span class="book-route-badge">Best Deal</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">ICN</div>
+                <div class="name">Seoul</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>2,800 DT</span>
+              </div>
+              <a href="Book.html?to=Seoul" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/Bangkok.jpg" alt="Bangkok">
+            <span class="book-route-badge">New Route</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">BKK</div>
+                <div class="name">Bangkok</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>2,100 DT</span>
+              </div>
+              <a href="Book.html?to=Bangkok" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/Mauritius.jpg" alt="Mauritius">
+            <span class="book-route-badge">Holiday Deal</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">MRU</div>
+                <div class="name">Mauritius</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>3,500 DT</span>
+              </div>
+              <a href="Book.html?to=Mauritius" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-route-card">
+          <div class="book-route-img">
+            <img src="Icons/Barcelone.jpg" alt="Barcelona">
+            <span class="book-route-badge">Weekend Getaway</span>
+          </div>
+          <div class="book-route-content">
+            <div class="book-route-cities">
+              <div class="book-route-city">
+                <div class="code">TUN</div>
+                <div class="name">Tunis</div>
+              </div>
+              <i class="ri-plane-line book-route-plane"></i>
+              <div class="book-route-city">
+                <div class="code">BCN</div>
+                <div class="name">Barcelona</div>
+              </div>
+            </div>
+            <div class="book-route-info">
+              <div class="book-route-price">
+                Starting from
+                <span>650 DT</span>
+              </div>
+              <a href="Book.html?to=Barcelona" class="book-route-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <img src="Icons/logo.png" alt="SayadiAirways">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to receive exclusive deals, travel tips, and the latest news from SayadiAirways.</p>
+            <form class="pro-footer__newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="pro-footer__contact">
+              <div class="pro-footer__contact-item">
+                <i class="ri-phone-line"></i>
+                <span>+216 70 123 456</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-mail-line"></i>
+                <span>contact@sayadiairways.com</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-map-pin-line"></i>
+                <span>Tunis-Carthage International Airport, Tunisia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function swapCities() {
+        const fromInput = document.querySelector('input[name="from"]');
+        const toInput = document.getElementById('toInput');
+        const temp = fromInput.value;
+        fromInput.value = toInput.value;
+        toInput.value = temp;
+      }
+
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const country = params.get('country') || params.get('to');
+        if (country) {
+          const toInput = document.getElementById('toInput');
+          if (toInput) toInput.value = decodeURIComponent(country.replace(/\+/g, ' '));
+        }
+        
+        const today = new Date().toISOString().split('T')[0];
+        const departureInput = document.querySelector('input[name="departure"]');
+        if (departureInput) {
+          departureInput.min = today;
+        }
+      })();
+    </script>
+  </body>
+</html>

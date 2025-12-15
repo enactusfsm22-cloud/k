@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1.2" />
+    <title>SayadiAirways - Flight Status</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <img src="Icons/logo.png" alt="SayadiAirways Logo" />
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ModifyBooking.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section__container book__container">
+      <div class="container">
+        <div class="book__header text-center mb-5">
+          <h1 class="section__header"><i class="ri-flight-takeoff-line"></i> Flight Status</h1>
+          <p>Check real-time flight information and status updates</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="booking__form__container">
+              <form class="booking__form">
+                <div class="card shadow-lg border-0">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-4"><i class="ri-search-line"></i> Search Flight Status</h5>
+                    
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-flight-takeoff-line"></i> Flight Number</label>
+                        <input type="text" class="form-control" placeholder="e.g., SA123" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-calendar-line"></i> Date</label>
+                        <input type="date" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="text-center mb-3">
+                      <span class="text-muted">OR</span>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-map-pin-line"></i> From</label>
+                        <input type="text" class="form-control" placeholder="Departure city" />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-map-pin-line"></i> To</label>
+                        <input type="text" class="form-control" placeholder="Destination city" />
+                      </div>
+                    </div>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="ri-search-line"></i> Check Status
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Flight Status Results -->
+            <div class="mt-5">
+              <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="card-title mb-0"><i class="ri-information-line"></i> Today's Flights</h5>
+                    <div class="text-muted small">
+                      <i class="ri-time-line"></i> Last updated: <span id="currentTime"></span>
+                    </div>
+                  </div>
+
+                  <!-- Filter Tabs -->
+                  <ul class="nav nav-pills mb-4" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all-flights" type="button">All Flights</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" data-bs-toggle="pill" data-bs-target="#departures" type="button">Departures</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" data-bs-toggle="pill" data-bs-target="#arrivals" type="button">Arrivals</button>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="all-flights" role="tabpanel">
+                      <div class="row g-3">
+                        <!-- Flight 1 - On Time -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-success fs-6">On Time</span>
+                              <strong class="text-primary">SA123</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>New York (JFK)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 10:00 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Actual: 10:00 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Gate: A12 | Terminal: 1</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>London (LHR)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 2:30 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 2:30 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Boeing 787-9</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 2 - Delayed -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-warning fs-6">Delayed</span>
+                              <strong class="text-primary">SA456</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Paris (CDG)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 3:00 PM</p>
+                              <p class="text-danger small mb-0 ms-4">Actual: 3:45 PM <span class="badge bg-danger">+45min</span></p>
+                              <p class="text-muted small mb-0 ms-4">Gate: B8 | Terminal: 2</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Dubai (DXB)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 8:00 PM</p>
+                              <p class="text-warning small mb-0 ms-4">Estimated: 8:45 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Airbus A350</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 3 - Boarding -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-info fs-6">Boarding</span>
+                              <strong class="text-primary">SA789</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Tokyo (NRT)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 4:15 PM</p>
+                              <p class="text-info small mb-0 ms-4"><i class="ri-user-line"></i> Boarding: Gate C5</p>
+                              <p class="text-muted small mb-0 ms-4">Terminal: 3</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Singapore (SIN)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 9:30 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 9:30 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Boeing 777-300ER</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 4 - Departed -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-primary fs-6">Departed</span>
+                              <strong class="text-primary">SA234</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Los Angeles (LAX)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 8:30 AM</p>
+                              <p class="text-success small mb-0 ms-4">Departed: 8:35 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Gate: D12 | Terminal: 4</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Frankfurt (FRA)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 6:45 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 6:50 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Airbus A380</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 5 - Arrived -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-success fs-6">Arrived</span>
+                              <strong class="text-primary">SA567</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Miami (MIA)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 6:00 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Departed: 6:05 AM</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Madrid (MAD)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 2:15 PM</p>
+                              <p class="text-success small mb-0 ms-4">Arrived: 2:10 PM <span class="badge bg-success">-5min</span></p>
+                              <p class="text-muted small mb-0 ms-4">Gate: E8 | Terminal: 4</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Boeing 737 MAX</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 6 - Cancelled -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-danger fs-6">Cancelled</span>
+                              <strong class="text-primary">SA890</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Toronto (YYZ)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 11:30 AM</p>
+                              <p class="text-danger small mb-0 ms-4"><i class="ri-close-circle-line"></i> Flight Cancelled</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Amsterdam (AMS)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 5:45 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-danger"><i class="ri-information-line"></i> Rebook available</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 7 - On Time -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-success fs-6">On Time</span>
+                              <strong class="text-primary">SA345</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Sydney (SYD)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 1:00 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Gate: F15 | Terminal: 1</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Hong Kong (HKG)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 7:30 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 7:30 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Airbus A330</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 8 - Delayed -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-warning fs-6">Delayed</span>
+                              <strong class="text-primary">SA678</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Rome (FCO)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 2:45 PM</p>
+                              <p class="text-danger small mb-0 ms-4">Actual: 3:20 PM <span class="badge bg-danger">+35min</span></p>
+                              <p class="text-muted small mb-0 ms-4">Gate: G3 | Terminal: 3</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Istanbul (IST)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 6:00 PM</p>
+                              <p class="text-warning small mb-0 ms-4">Estimated: 6:35 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Boeing 787-8</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 9 - Boarding -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-info fs-6">Boarding</span>
+                              <strong class="text-primary">SA901</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Barcelona (BCN)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 5:30 PM</p>
+                              <p class="text-info small mb-0 ms-4"><i class="ri-user-line"></i> Boarding: Gate H7</p>
+                              <p class="text-muted small mb-0 ms-4">Terminal: 2</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Vienna (VIE)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 8:15 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 8:15 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Airbus A320</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 10 - On Time -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-success fs-6">On Time</span>
+                              <strong class="text-primary">SA112</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Berlin (BER)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 9:00 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Gate: A5 | Terminal: 1</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Stockholm (ARN)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 11:30 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 11:30 AM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Embraer E190</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 11 - Arrived -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-success fs-6">Arrived</span>
+                              <strong class="text-primary">SA223</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Zurich (ZRH)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 7:15 AM</p>
+                              <p class="text-muted small mb-0 ms-4">Departed: 7:18 AM</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Brussels (BRU)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 8:45 AM</p>
+                              <p class="text-success small mb-0 ms-4">Arrived: 8:42 AM <span class="badge bg-success">-3min</span></p>
+                              <p class="text-muted small mb-0 ms-4">Gate: B12 | Terminal: 1</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Bombardier CRJ900</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Flight 12 - Departed -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="status-card p-3 border rounded h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                              <span class="badge bg-primary fs-6">Departed</span>
+                              <strong class="text-primary">SA334</strong>
+                            </div>
+                            <div class="mb-3">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-takeoff-line text-primary me-2"></i>
+                                <strong>Munich (MUC)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 12:00 PM</p>
+                              <p class="text-success small mb-0 ms-4">Departed: 12:03 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Gate: C9 | Terminal: 2</p>
+                            </div>
+                            <div class="mb-2">
+                              <div class="d-flex align-items-center mb-2">
+                                <i class="ri-flight-land-line text-success me-2"></i>
+                                <strong>Copenhagen (CPH)</strong>
+                              </div>
+                              <p class="text-muted small mb-0 ms-4">Scheduled: 1:45 PM</p>
+                              <p class="text-muted small mb-0 ms-4">Estimated: 1:48 PM</p>
+                            </div>
+                            <div class="mt-3 pt-3 border-top">
+                              <small class="text-muted"><i class="ri-plane-line"></i> Aircraft: Airbus A321</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="departures" role="tabpanel">
+                      <p class="text-muted">Filtered departures will appear here</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="arrivals" role="tabpanel">
+                      <p class="text-muted">Filtered arrivals will appear here</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 pt-4 border-top">
+                    <h6 class="mb-3">Status Legend</h6>
+                    <div class="row g-3">
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-success me-2">On Time</span>
+                          <small class="text-muted">Flight is on schedule</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-warning me-2">Delayed</span>
+                          <small class="text-muted">Flight is delayed</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-info me-2">Boarding</span>
+                          <small class="text-muted">Currently boarding</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-primary me-2">Departed</span>
+                          <small class="text-muted">Flight has departed</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-success me-2">Arrived</span>
+                          <small class="text-muted">Flight has arrived</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center">
+                          <span class="badge bg-danger me-2">Cancelled</span>
+                          <small class="text-muted">Flight cancelled</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Update current time
+      function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('en-US', { 
+          hour: '2-digit', 
+          minute: '2-digit',
+          second: '2-digit'
+        });
+        const dateString = now.toLocaleDateString('en-US', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric'
+        });
+        document.getElementById('currentTime').textContent = dateString + ' ' + timeString;
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <img src="Icons/logo.png" alt="SayadiAirways">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to receive exclusive deals, travel tips, and the latest news from SayadiAirways.</p>
+            <form class="pro-footer__newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="pro-footer__contact">
+              <div class="pro-footer__contact-item">
+                <i class="ri-phone-line"></i>
+                <span>+216 70 123 456</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-mail-line"></i>
+                <span>contact@sayadiairways.com</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-map-pin-line"></i>
+                <span>Tunis-Carthage International Airport, Tunisia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+

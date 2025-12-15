@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=1.2" />
+    <title>SayadiAirways - Travel Insurance</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <img src="Icons/logo.png" alt="SayadiAirways Logo" />
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ModifyBooking.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section__container book__container">
+      <div class="container">
+        <div class="book__header text-center mb-5">
+          <h1 class="section__header"><i class="ri-shield-line"></i> Travel Insurance</h1>
+          <p>Protect your journey with comprehensive travel insurance</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="booking__form__container">
+              <form class="booking__form">
+                <div class="card shadow-lg border-0">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-4"><i class="ri-information-line"></i> Get a Quote</h5>
+                    
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-map-pin-line"></i> Destination</label>
+                        <input type="text" class="form-control" placeholder="Country or region" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-user-line"></i> Number of Travelers</label>
+                        <select class="form-select" required>
+                          <option value="1">1 Traveler</option>
+                          <option value="2">2 Travelers</option>
+                          <option value="3">3 Travelers</option>
+                          <option value="4">4 Travelers</option>
+                          <option value="5+">5+ Travelers</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-calendar-line"></i> Departure Date</label>
+                        <input type="date" class="form-control" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label"><i class="ri-calendar-check-line"></i> Return Date</label>
+                        <input type="date" class="form-control" required />
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-12">
+                        <label class="form-label"><i class="ri-shield-line"></i> Coverage Type</label>
+                        <select class="form-select" required>
+                          <option value="basic">Basic Coverage</option>
+                          <option value="standard">Standard Coverage</option>
+                          <option value="premium">Premium Coverage</option>
+                          <option value="comprehensive">Comprehensive Coverage</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="ri-calculator-line"></i> Get Quote
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="mt-5">
+              <div class="card shadow-lg border-0">
+                <div class="card-body p-4">
+                  <h5 class="card-title mb-4"><i class="ri-information-line"></i> Coverage Options</h5>
+                  
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="card h-100 border">
+                        <div class="card-body">
+                          <h5 class="card-title"><i class="ri-shield-line"></i> Basic Coverage</h5>
+                          <p class="text-muted">Essential protection for your trip</p>
+                          <ul class="list-unstyled">
+                            <li><i class="ri-check-line text-success"></i> Trip cancellation</li>
+                            <li><i class="ri-check-line text-success"></i> Medical emergencies</li>
+                            <li><i class="ri-check-line text-success"></i> Baggage loss</li>
+                            <li><i class="ri-check-line text-success"></i> Travel delay</li>
+                          </ul>
+                          <p class="mt-3"><strong>From $25</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card h-100 border border-primary">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0"><i class="ri-shield-star-line"></i> Premium Coverage</h5>
+                            <span class="badge bg-primary">Popular</span>
+                          </div>
+                          <p class="text-muted">Comprehensive protection with additional benefits</p>
+                          <ul class="list-unstyled">
+                            <li><i class="ri-check-line text-success"></i> All basic coverage</li>
+                            <li><i class="ri-check-line text-success"></i> Adventure sports</li>
+                            <li><i class="ri-check-line text-success"></i> Pre-existing conditions</li>
+                            <li><i class="ri-check-line text-success"></i> 24/7 concierge</li>
+                            <li><i class="ri-check-line text-success"></i> Higher coverage limits</li>
+                          </ul>
+                          <p class="mt-3"><strong>From $75</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4">
+                    <h6>What's Covered?</h6>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                          <i class="ri-checkbox-circle-line text-success me-2 mt-1"></i>
+                          <div>
+                            <strong>Trip Cancellation</strong>
+                            <p class="text-muted mb-0 small">Get reimbursed if you need to cancel your trip</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                          <i class="ri-checkbox-circle-line text-success me-2 mt-1"></i>
+                          <div>
+                            <strong>Medical Expenses</strong>
+                            <p class="text-muted mb-0 small">Coverage for medical emergencies abroad</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                          <i class="ri-checkbox-circle-line text-success me-2 mt-1"></i>
+                          <div>
+                            <strong>Baggage Protection</strong>
+                            <p class="text-muted mb-0 small">Coverage for lost, stolen, or damaged baggage</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                          <i class="ri-checkbox-circle-line text-success me-2 mt-1"></i>
+                          <div>
+                            <strong>Travel Delay</strong>
+                            <p class="text-muted mb-0 small">Compensation for flight delays and cancellations</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <img src="Icons/logo.png" alt="SayadiAirways">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to receive exclusive deals, travel tips, and the latest news from SayadiAirways.</p>
+            <form class="pro-footer__newsletter-form">
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="pro-footer__contact">
+              <div class="pro-footer__contact-item">
+                <i class="ri-phone-line"></i>
+                <span>+216 70 123 456</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-mail-line"></i>
+                <span>contact@sayadiairways.com</span>
+              </div>
+              <div class="pro-footer__contact-item">
+                <i class="ri-map-pin-line"></i>
+                <span>Tunis-Carthage International Airport, Tunisia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+
+
